@@ -13,7 +13,7 @@ function App() {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('http://192.168.1.156:3005/api/login', {
+      const response = await fetch('https://insta-back-ews1.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
